@@ -16,13 +16,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama Matakuliah:</strong>
-                {{ $post->nama_matakuliah }}
+                {{ $matakuliah->nama_matakuliah }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>SKS:</strong>
-                {{ $post->sks }}
+                {{ $matakuliah->sks }}
             </div>
     </div>
 @endsection

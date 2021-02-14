@@ -19,8 +19,12 @@ Route::resource('absensis', AbsController::class);
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" mi
 */
+//Route::put('/mahasiswas/{id}', [MhsController::class, 'update']);
+//Route::delete('/mahasiswas/{id}', [MhsController::class, 'destroy']);
 
 
 Route::get('', [MhsController::class, 'index']);
 Route::get('', [MtkController::class, 'index']);
 Route::get('', [AbsController::class, 'index']);
+Route::delete('/mahasiswas/{id}', [MhsController::class, 'destroy']);
+Route::delete('', [MhsController::class, 'destroy']);

@@ -30,25 +30,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Waktu Absen:</strong>
-                <input type="time" name="waktu_absen" class="form-control" placeholder="Waktu Absen">
+                <input type="date" name="waktu_absen" class="form-control" placeholder="Waktu Absen">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Mahasiswa Id:</strong>
-                <input type="varchar" name="mahasiswa_id" class="form-control" placeholder="Mahasiswa Id">
+                <input type="string" name="mahasiswa_id" class="form-control" placeholder="Mahasiswa Id">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Matakuliah Id:</strong>
-                <input type="varchar" name="matakuliah_id" class="form-control" placeholder="Matakuliah Id">
+                <input type="string" name="matakuliah_id" class="form-control" placeholder="Matakuliah Id">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Keterangan</strong>
-                <input type="varchar" name="keterangan" class="form-control" placeholder="Keterangan">
+                <input type="string" name="keterangan" class="form-control" placeholder="Keterangan">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

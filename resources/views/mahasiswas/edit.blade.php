@@ -23,7 +23,7 @@
         </div>
     @endif
  
-    <form action="{{ route('mahasiswas.update',$post->id) }}" method="POST">
+    <form action="{{ route('mahasiswas.update',$mahasiswa->id) }}" method="POST">
         @csrf
         @method('PUT')
  
@@ -31,7 +31,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
             <strong>Nama Mahasiswa:</strong>
-                <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Nama Mahasiswa">
+                <input type="string" name="nama_mahasiswa" class="form-control" placeholder="Nama Mahasiswa">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -52,7 +52,7 @@
                 <input type="string" name="email" class="form-control" placeholder="Email">
             </div>
         </div>
-           -12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </div>

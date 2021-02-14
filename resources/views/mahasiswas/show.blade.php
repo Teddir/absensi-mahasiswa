@@ -16,23 +16,23 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama Mahasiswa:</strong>
-                {{ $post->nama_mahasiswa }}
+                {{ $mahasiswa->nama_mahasiswa }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Alamat:</strong>
-                {{ $post->alamat }}
+                {{ $mahasiswa->alamat }}
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>No Telepon:</strong>
-                {{ $post->no_tlp }}
+                {{ $mahasiswa->no_tlp }}
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                {{ $post->email }}
+                {{ $mahasiswa->email }}
             </div>
         </div>
     </div>

@@ -16,23 +16,23 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Waktu Absen:</strong>
-                {{ $post->waktu_absen }}
+                {{ $absensi->waktu_absen }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Mahasiswa Id:</strong>
-                {{ $post->mahasiswa_id }}
+                {{ $absensi->mahasiswa_id }}
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Matakuliah Id:</strong>
-                {{ $post->matakuliah_id }}
+                {{ $absensi->matakuliah_id }}
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Keterangan:</strong>
-                {{ $post->keterangan }}
+                {{ $absensi->keterangan }}
             </div>
         </div>
     </div>

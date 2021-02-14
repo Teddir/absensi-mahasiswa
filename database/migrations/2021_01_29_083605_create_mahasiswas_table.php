@@ -16,10 +16,10 @@ class CreateMahasiswasTable extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->increments('id');
-            $table->varchar('nama_mahasiswa');
-            $table->varchar('alamat');
-            $table->varchar('no_tlp');
-            $table->varchar('email');
+            $table->string('nama_mahasiswa');
+            $table->string('alamat');
+            $table->string('no_tlp');
+            $table->string('email');
             $table->timestamps();
         });
     }

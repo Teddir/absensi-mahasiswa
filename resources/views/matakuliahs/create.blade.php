@@ -30,7 +30,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama Matakuliah:</strong>
-                <input type="text" name="nama_matakuliah" class="form-control" placeholder="Nama Matakuliah">
+                <input type="string" name="nama_matakuliah" class="form-control" placeholder="Nama Matakuliah">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

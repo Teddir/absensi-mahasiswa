@@ -28,7 +28,7 @@ class MtkController extends Controller
 
         ]);
  
-        Post::create($request->all());
+        matakuliah::create($request->all());
  
         return redirect()->route('matakuliahs.index')
                         ->with('success','Matakuliah created successfully.');

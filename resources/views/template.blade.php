@@ -22,6 +22,9 @@
             <a class="nav-link active" href="/mahasiswas"> Mahasiswa</a>
             <a class="nav-link" href="/matakuliahs">Matakuliah</a>
             <a class="nav-link" href="/absensis">Absensi</a>
+            <a class="nav-link" href="/kontrakmks">Kontrak Mata Kuliah</a>
+            <a class="nav-link" href="/jadwals">Jadwal</a>
+            <a class="nav-link" href="/semesters">Semester</a>
             </div>
         </div>
         </nav>
