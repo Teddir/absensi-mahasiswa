@@ -7,7 +7,7 @@
                 <h2>Edit Matakuliah</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('matakuliahs.index') }}"> Back</a>
+                <a class="btn btn-secondary" href="{{ url('matakuliahs') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,21 +23,21 @@
         </div>
     @endif
  
-    <form action="{{ route('matakuliahs.update',$matakuliah->id) }}" method="POST">
+    <form action="{{ url('matakuliahs.update',$matakuliah->id) }}" method="POST">
         @csrf
         @method('PUT')
  
         <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-            <strong>Nama Matakuliah:</strong>
-                <input type="string" name="nama_matakuliah" class="form-control" placeholder="Nama Matakuliah">
+            <strong>Nama Matakuliah: </strong>
+                <input type="string" name="nama_matakuliah" class="form-control" placeholder="Nama Matakuliah" value="{{$matakuliah->nama_matakuliah}}" >
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
             <strong>SKS:</strong>
-                <input type="string" name="sks" class="form-control" placeholder="SKS">
+                <input type="string" name="sks" class="form-control" placeholder="SKS" value="{{$matakuliah->sks}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

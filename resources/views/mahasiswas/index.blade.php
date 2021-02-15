@@ -7,7 +7,7 @@
                 <h2>Mahasiswa</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Create Mahasiswa</a>
+                <a class="btn btn-success" href="{{ url('mahasiswas.create') }}"> Create Mahasiswa</a>
             </div>
         </div>
     </div>
@@ -36,11 +36,11 @@
             <td>{{ $post->no_tlp }}</td>
             <td>{{ $post->email }}</td>
             <td class="text-center">
-                <form action="{{ route('mahasiswas.destroy',$post->id) }}" method="POST">
+                <form action="{{ url('mahasiswas.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('mahasiswas.show',$post->id) }}">Hadir</a>
+                    <a class="btn btn-info btn-sm" href="{{ url('mahasiswas.show',$post->id) }}">Hadir</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('mahasiswas.edit',$post->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ url('mahasiswas.edit',$post->id) }}">Edit</a>
  
                     @csrf
                     @method('DELETE')

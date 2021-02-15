@@ -30,38 +30,44 @@ class MtkController extends Controller
  
         matakuliah::create($request->all());
  
-        return redirect()->route('matakuliahs.index')
+        return redirect('/matakuliahs')
                         ->with('success','Matakuliah created successfully.');
     }
  
-    public function show(Post $post)
+    public function show($post)
     {
-        return view('matakuliahs.show',compact('post'));
+        $matakuliah = matakuliah::find($post);
+        return view('matakuliahs.show',compact('matakuliah'));
     }
  
-    public function edit(Post $post)
+    public function edit( $post)
     {
-        return view('matakuliahs.edit',compact('post'));
+        $matakuliah = matakuliah::find($post);
+        return view('matakuliahs.edit',compact('matakuliah'));
     }
  
-    public function update(Request $request, Post $post)
+    public function update(Request $request,  $post)
     {
         $request->validate([
             'nama_matakuliah' => 'required',
             'sks' => 'required|numeric',
         ]);
+        
+        $matakuliah = matakuliah::find($post);
+
+        $dataRequest  = $request->all();
+        $dataResult  = array_filter($dataRequest);
+        $matakuliah->update($dataResult);
  
-        $post->update($request->all());
- 
-        return redirect()->route('matakuliahs.index')
+        return redirect('/matakuliahs')
                         ->with('success','Mahasiswa updated successfully');
     }
  
-    public function destroy(Post $post)
+    public function destroy( $post)
     {
-        $post->delete();
- 
-        return redirect()->route('matakuliahs.index')
+
+        $matakuliah = matakuliah::destroy($post);
+        return redirect('/matakuliahs')
                         ->with('success','Mahasiswa deleted successfully');
     }
 }

@@ -7,7 +7,7 @@
                 <h2>Absensi</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('absensis.create') }}"> Create Absensis</a>
+                <a class="btn btn-success" href="{{ url('/absensis.create') }}"> Create Absensis</a>
             </div>
         </div>
     </div>
@@ -31,17 +31,17 @@
         @foreach ($absensis as $post)
         <tr>
             <td class="text-center">{{ ++$i }}</td>
-            <td>{{ $post->waktu_absensi}}</td>
+            <td>{{ $post->waktu_absen}}</td>
             <td>{{ $post->mahasiswa_id }}</td>
             <td>{{ $post->matakuliah_id }}</td>
             <td>{{ $post->keterangan }}</td>
             <td class="text-center">
-                <form action="{{ route('absensis.destroy',$post->id) }}" method="POST">
+                <form action="{{ url('absensis.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('absensis.show',$post->id) }}">Absen Disini</a>
- 
-                    <a class="btn btn-primary btn-sm" href="{{ route('absensis.edit',$post->id) }}">Edit Absen</a>
- 
+            <a class="btn btn-info btn-sm" href="{{ url('absensis.show',$post->id) }}">Absen Disini</a>
+
+            <a class="btn btn-primary btn-sm" href="{{ url('absensis.edit',$post->id) }}">Edit Absen</a>
+
                     @csrf
                     @method('DELETE')
  

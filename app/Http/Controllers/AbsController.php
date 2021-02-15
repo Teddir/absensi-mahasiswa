@@ -9,7 +9,6 @@ class AbsController extends Controller
 {
     public function index()
     {
-    
         $absensis = absensi::latest()->paginate(5);
         
         return view('absensis.index',compact('absensis'))
@@ -33,21 +32,23 @@ class AbsController extends Controller
  
         absensi::create($request->all());
  
-        return redirect()->route('absensis.index')
+        return redirect('absensis')
                         ->with('success','Mahasiswa created successfully.');
     }
  
-    public function show(Absensi $post)
+    public function show(Absensi $id)
     {
-        return view('absensis.show',compact('post'));
+        $absensi = absensi::find($id);
+        return view('absensis.show',compact('absensi'));
     }
  
-    public function edit(Absensi $post)
+    public function edit(Absensi $id)
     {
+        $post = absensi::find($id);
         return view('absensis.edit',compact('post'));
     }
  
-    public function update(Request $request, Absensi $post)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'waktu_absen' => 'required',
@@ -56,17 +57,20 @@ class AbsController extends Controller
             'keterangan' => 'required',
         ]);
  
-        $post->update($request->all());
- dd($post);
-        return redirect()->route('absensis.index')
+        $absensi = absensi::find($id);
+
+        $dataRequest  = $request->all();
+        $dataResult  = array_filter($dataRequest);
+        $absensi->update($dataResult);
+
+        return redirect('absensis')
                         ->with('success','Mahasiswa updated successfully');
     }
  
     public function destroy(Absensi $post)
     {
-        $post->delete();
- 
-        return redirect()->route('absensis.index')
-                        ->with('success','Mahasiswa deleted successfully');
+        $absensi = absensi::destroy($post);
+        return redirect('absensis')
+                        ->with('success','Absensi deleted successfully');
     }
 }

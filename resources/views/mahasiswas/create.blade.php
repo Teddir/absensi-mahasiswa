@@ -7,7 +7,7 @@
             <h2>Create New Mahasiswa</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-secondary" href="{{ route('mahasiswas.index') }}"> Back</a>
+            <a class="btn btn-secondary" href="{{ url('/') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
  
-<form action="{{ route('mahasiswas.store') }}" method="POST">
+<form action="{{ url('mahasiswas.store') }}" method="POST">
     @csrf
  
      <div class="row">

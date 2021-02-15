@@ -7,7 +7,7 @@
             <h2>Create New Matakuliah</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-secondary" href="{{ route('matakuliahs.index') }}"> Back</a>
+            <a class="btn btn-secondary" href="{{ url('matakuliahs.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
  
-<form action="{{ route('matakuliahs.store') }}" method="POST">
+<form action="{{ url('matakuliahs.store') }}" method="POST">
     @csrf
  
      <div class="row">

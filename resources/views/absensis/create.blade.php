@@ -7,7 +7,7 @@
             <h2>Create New Absensi</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-secondary" href="{{ route('absensis.index') }}"> Back</a>
+            <a class="btn btn-secondary" href="{{ url('/absensis') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
  
-<form action="{{ route('absensis.store') }}" method="POST">
+<form action="{{ url('absensis.store') }}" method="POST">
     @csrf
  
      <div class="row">

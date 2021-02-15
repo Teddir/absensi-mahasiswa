@@ -32,7 +32,7 @@ class MhsController extends Controller
  
         Mahasiswa::create($request->all());
  
-        return redirect()->route('mahasiswas.index')
+        return redirect('/')
                         ->with('success','Mahasiswa created successfully.');
     }
  
@@ -60,7 +60,7 @@ class MhsController extends Controller
  
         $post->update($request->all());
  
-        return redirect()->route('mahasiswas.index')
+        return redirect('/')
                         ->with('success','Mahasiswa updated successfully');
     }
  

@@ -7,7 +7,7 @@
                 <h2>Matakuliah</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('matakuliahs.create') }}"> Create Matakuliah</a>
+                <a class="btn btn-success" href="{{ url('matakuliahs.create') }}"> Create Matakuliah</a>
             </div>
         </div>
     </div>
@@ -32,11 +32,11 @@
             <td>{{ $post->nama_matakuliah}}</td>
             <td>{{ $post->sks }}</td>
             <td class="text-center">
-                <form action="{{ route('matakuliahs.destroy',$post->id) }}" method="POST">
+                <form action="{{ url('matakuliahs.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('matakuliahs.show',$post->id) }}">Hadir</a>
+                    <a class="btn btn-info btn-sm" href="{{ url('matakuliahs.show',$post->id) }}">Hadir</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('matakuliahs.edit',$post->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ url('matakuliahs.edit',$post->id) }}">Edit</a>
  
                     @csrf
                     @method('DELETE')

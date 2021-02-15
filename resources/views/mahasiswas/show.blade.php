@@ -7,7 +7,7 @@
                 <h2> Show Data Mahasiswa</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('mahasiswas.index') }}"> Back</a>
+                <a class="btn btn-secondary" href="{{ url('/') }}"> Back</a>
             </div>
         </div>
     </div>
